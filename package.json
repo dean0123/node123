@@ -1,0 +1,23 @@
+{
+  "name": "node123",
+  "version": "1.0.0",
+  "description": "- `google node.js` 並下載安裝 Node.js\r - 完了 之後 測試  \r ```\r $ node --version  (有顯示版本號碼 就對了)\r $ npm --version   (有顯示版本號碼 就對了)\r ```\r   npm = node package manager, 用來安裝node相關軟體 package",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dean0123/node123.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/dean0123/node123/issues"
+  },
+  "homepage": "https://github.com/dean0123/node123#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
