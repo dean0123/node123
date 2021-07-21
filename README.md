@@ -15,8 +15,8 @@ $ node hello.js  就會看到 "Hello !!"
 ```
 
 # 3. 弄個 Web Server 試試看
-- 寫個檔案叫做 `server.js` 內容如下 bbb
-- aaa
+- 寫個檔案叫做 `server.js` 內容如下
+
 ```
 var http = require("http");
 
