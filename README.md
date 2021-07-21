@@ -1,20 +1,26 @@
-# 教導我自己如何寫node
-# 2 加一點東西
-說明 **很重要** 下指令 `$ google git`
+# 1. 開始安裝設定 node.js 寫程式的環境
+
+1. `google node.js` 並下載安裝 Node.js
+2. 完了 之後 測試  (npm = node package manager, 用來安裝node相關軟體 package)
 ```
-$ git 
-你好
+$ node --version
+$ npm --version
 ```
 
-
-自己再網路上加的
-
+# 2. 寫個簡單的 node 程式. 
+1. `cd` 到工作目錄, 寫個簡單的檔案 叫做 `hello.js`, 內容一行 `console.log("Hello !!")`, 然後執行 
 ```
-echo "# test01" >> README.md
-git init
-git add README.md
-git commit -m "first commit"
-git branch -M main
-git remote add origin https://github.com/dean0123/test01.git
-git push -u origin main
+$ node hello.js  就會看到 "Hello !!"
+```
+
+# 3. 弄個 Web Server 試試看
+1. 寫個檔案叫做 `server.js` 裏面是
+```
+var http = require("http");
+
+http.createServer(function(request, response) {
+  response.writeHead(200, {"Content-Type": "text/plain"});
+  response.write("Hello Web");
+  response.end();
+}).listen(8888);
 ```
