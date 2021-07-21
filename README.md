@@ -56,3 +56,28 @@ app.listen(8888, function () {
 ```
 $ node index.js
 ``` 
+
+# 6. 測試 get /json  回應 JSON 給API 呼叫
+- 測 Json `index.js` 加入
+```
+app.get('/json', function (req, res) => {
+   res.json({
+       Result: "ok"
+   });
+})
+```
+
+# 7. 測試 post  //因爲 get 只能由 URL 傳參數, Post可以由 FORM 傳 參數
+- Post 要裝一 `$ npm install body-parser --save` 
+- index.js 裏面加入
+```
+app.post('/login', function (req, res) => {   
+   res.json({
+       Post_result: 'ok',
+       body: req.body
+   });
+   console.log(req.body)
+})
+```
+- 然後用 Postman 測試傳入跟回應 
+- 也可以用 curl -X POST -H "Content-Type: application/json" -d '{"uid":"david", "password":"12345678"}' http://localhost:8888/login 
