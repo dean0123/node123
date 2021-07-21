@@ -8,13 +8,13 @@ $ npm --version   (有顯示版本號碼 就對了)
 ```
 
 # 2. 寫個簡單的 node 程式. 
-1. `cd` 到工作目錄, 寫個簡單的檔案 叫做 `hello.js`, 內容一行 `console.log("Hello !!")`, 然後執行 
+- `cd` 到工作目錄, 寫個簡單的檔案 叫做 `hello.js`, 內容一行 `console.log("Hello !!")`, 然後執行 
 ```
 $ node hello.js  就會看到 "Hello !!"
 ```
 
 # 3. 弄個 Web Server 試試看
-1. 寫個檔案叫做 `server.js` 裏面是
+- 寫個檔案叫做 `server.js` 裏面是
 ```
 var http = require("http");
 
