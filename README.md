@@ -1,10 +1,10 @@
 # 1. 開始安裝設定 node.js 寫程式的環境
 
-1. `google node.js` 並下載安裝 Node.js
-2. 完了 之後 測試  (npm = node package manager, 用來安裝node相關軟體 package)
+- `google node.js` 並下載安裝 Node.js
+- 完了 之後 測試  (npm = node package manager, 用來安裝node相關軟體 package)
 ```
-$ node --version
-$ npm --version
+$ node --version  (有顯示版本號碼 就對了)
+$ npm --version   (有顯示版本號碼 就對了)
 ```
 
 # 2. 寫個簡單的 node 程式. 
