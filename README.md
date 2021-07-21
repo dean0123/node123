@@ -37,3 +37,22 @@ $ node server.js
 $ npm init                    (全部用預設, 會產生 package.json)
 $ npm install express --save  (多了 node_modules)
 ``` 
+- 加一個檔案 .gitignore 裏面放 `/node_modules/*` 這樣就不必把 這些檔案都放入 github 了, 沒必要, 因爲不會改
+
+# 5. 寫一個 index.js  內容如下
+```
+var express = require('express');
+var app = express();  // 產生 Express app 物件 
+ 
+app.get('/', function (req, res) {
+   res.send('Hello World Express');
+})
+ 
+app.listen(8888, function () {
+   console.log("Example app listening at http://localhost:8888")
+})
+```
+然後 測試啓動後在 browser 上驗證
+```
+$ node index.js
+``` 
