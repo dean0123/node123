@@ -29,3 +29,11 @@ http.createServer(function(request, response) {
 $ node server.js
 ```
 - 再開本機 browser 看 `http://localhost:8888` 看到 Hello Web 網頁就對了
+
+# 4. 裝 express
+- why 爲什麼要 express , 因爲他是 node 中好用的 web framework
+- how 安裝 
+``` 
+$ npm init                    (全部用預設, 會產生 package.json)
+$ npm install express --save  (多了 node_modules)
+``` 
