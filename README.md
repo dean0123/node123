@@ -26,3 +26,8 @@ http.createServer(function(request, response) {
   response.end();
 }).listen(8888);
 ```
+- 然後 執行
+```
+$ node server.js
+```
+- 再開本機 browser 看 `http://localhost:8888` 看到 Hello Web 網頁就對了
