@@ -10,7 +10,8 @@ $ npm --version   (有顯示版本號碼 就對了)
   npm = node package manager, 用來安裝node相關軟體 package
 
 # 2. 寫個簡單的 node 程式. 
-- `cd` 到工作目錄, 寫個簡單的檔案 叫做 `hello.js`, 內容一行 `console.log("Hello !!")`, 然後執行 
+- `cd` 到工作目錄, 寫個簡單的檔案 叫做 `hello.js`,  
+內容一行 `console.log("Hello !!")`, 然後執行 
 ```
 $ node hello.js  就會看到 "Hello !!"
 ```
@@ -59,7 +60,8 @@ $ node index.js
 ``` 
 
 # 5. npm install -g nodemon
-- 因爲常常要 control - C 重啓 node index.js , 安裝使用 nodemon 可以自動偵測檔案變化, 重load, 開發上比較方便
+- 因爲常常要 control - C 重啓 node index.js   
+安裝使用 nodemon 可以自動偵測檔案變化, 重load, 開發上比較方便
 ```
 $ npm install -g nodemon
 $ nodemon index.js
