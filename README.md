@@ -31,7 +31,7 @@ $ node server.js
 ```
 - 再開本機 browser 看 `http://localhost:8888` 看到 Hello Web 網頁就對了
 
-# 4. 裝 express
+# 4. 裝 express Web Framework 寫一個 index.js
 - why 爲什麼要 express , 因爲他是 node 中好用的 web framework
 - how 安裝 
 ``` 
@@ -40,7 +40,7 @@ $ npm install express --save  (多了 node_modules)
 ``` 
 - 加一個檔案 .gitignore 裏面放 `/node_modules/*` 這樣就不必把 這些檔案都放入 github 了, 沒必要, 因爲不會改
 
-# 5. 寫一個 index.js  內容如下
+- 寫一個 index.js  
 ```
 var express = require('express');
 var app = express();  // 產生 Express app 物件 
@@ -53,21 +53,18 @@ app.listen(8888, function () {
    console.log("Example app listening at http://localhost:8888")
 })
 ```
-然後 測試啓動後在 browser 上驗證
+- 然後 測試啓動後在 browser 上驗證
 ```
 $ node index.js
 ``` 
 
-# npm install -g nodemon
+# 5. npm install -g nodemon
 - 因爲常常要 control - C 重啓 node index.js , 安裝使用 nodemon 可以自動偵測檔案變化, 重load, 開發上比較方便
 ```
 $ npm install -g nodemon
 $ nodemon index.js
 ```
-# 設定靜態的檔案  html, css, js, JPG 等
-```
-app.use(express.static('public'))
-```
+
 
 # 6. 測試 get /json  回應 JSON 給API 呼叫
 - 測 Json `index.js` 加入
@@ -100,4 +97,9 @@ app.post('/login', (req, res)=>{
 - 也可以用 curl 來測試, 
 ```
 curl -X POST -H "Content-Type: application/json" -d "{\"user\":\"Amy\"}" http://localhost:8888/login
+```
+
+# 8. 設定靜態的檔案  html, css, js, JPG 等
+```
+app.use(express.static('public'))
 ```
