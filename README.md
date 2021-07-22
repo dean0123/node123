@@ -85,7 +85,7 @@ app.get('/json', function (req, res) => {
 
 # 7. 測試 post 透過 BODY 傳 JSON 給 Server
 - 因爲 GET 只能由 URL 傳參數, POST 可以由 FORM BODY 傳 參數. 如 res.body.user
-- Post 要裝一 ~~--$ npm install body-parser --save--~~ 新版已經不需要裝了, 包含在 express 裏面
+- ~~Post 要裝一 --$ npm install body-parser --save-- 新版已經不需要裝了, 包含在 express 裏面~~
 - index.js 裏面加入
 ```
 app.use(express.urlencoded({ extended: true }));
