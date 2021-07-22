@@ -7,7 +7,7 @@
 $ node --version  (有顯示版本號碼 就對了)
 $ npm --version   (有顯示版本號碼 就對了)
 ```
-  npm = node package manager, 用來安裝node相關軟體 package
+> npm = node package manager, 用來安裝node相關軟體 package
 
 # 2. 寫個簡單的 node 程式. 
 - `cd` 到工作目錄, 寫個簡單的檔案 叫做 `hello.js`,  
@@ -15,6 +15,7 @@ $ npm --version   (有顯示版本號碼 就對了)
 ```
 $ node hello.js  就會看到 "Hello !!"
 ```
+
 
 # 3. 弄個 Web Server 試試看
 - 寫個檔案叫做 `server.js` 內容這樣
@@ -31,6 +32,14 @@ http.createServer(function(request, response) {
 $ node server.js
 ```
 - 再開本機 browser 看 `http://localhost:8888` 看到 Hello Web 網頁就對了
+
+
+> 因爲常常要 control - C 重啓 node index.js   
+>安裝使用 **nodemon** 可以自動偵測檔案變化, 重load, 開發上比較方便
+```
+$ npm install -g nodemon
+$ nodemon server.js
+```
 
 # 4. 裝 express Web Framework 寫一個 index.js
 - why 爲什麼要 express , 因爲他是 node 中好用的 web framework
@@ -59,13 +68,6 @@ app.listen(8888, function () {
 $ node index.js
 ``` 
 
-# 5. npm install -g nodemon
-- 因爲常常要 control - C 重啓 node index.js   
-安裝使用 nodemon 可以自動偵測檔案變化, 重load, 開發上比較方便
-```
-$ npm install -g nodemon
-$ nodemon index.js
-```
 
 
 # 6. 測試 get 透過 URL 傳 Param 給 Server
