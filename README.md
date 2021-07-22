@@ -34,14 +34,9 @@ $ node server.js
 - 再開本機 browser 看 `http://localhost:8888` 看到 Hello Web 網頁就對了
 
 
-> 因爲常常要 control - C 重啓 node index.js   
->安裝使用 **nodemon** 可以自動偵測檔案變化, 重load, 開發上比較方便
-```
-$ npm install -g nodemon
-$ nodemon server.js
-```
 
-# 4. 裝 express Web Framework 寫一個 index.js
+
+# 4. npm 裝 express Web Framework 寫一個 index.js
 - why 爲什麼要 express , 因爲他是 node 中好用的 web framework
 - how 安裝 
 ``` 
@@ -66,8 +61,15 @@ app.listen(8888, function () {
 - 然後 測試啓動後在 browser 上驗證
 ```
 $ node index.js
-``` 
+```  
 
+
+> 因爲常常要 control - C 重啓 node index.js   
+>安裝使用 **nodemon** 可以自動偵測檔案變化, 重load, 開發上比較方便. (Mac 上可能要 `$ sudo npn i -g nodeman` )
+```
+$ npm install -g nodemon
+$ nodemon index.js
+```
 
 
 # 6. 測試 get 透過 URL 傳 Param 給 Server
@@ -83,7 +85,7 @@ app.get('/json', function (req, res) => {
 
 # 7. 測試 post 透過 BODY 傳 JSON 給 Server
 - 因爲 GET 只能由 URL 傳參數, POST 可以由 FORM BODY 傳 參數. 如 res.body.user
-- Post 要裝一 ~~`$ npm install body-parser --save` ~~ 新版已經不需要裝了, 包含在 express 裏面
+- Post 要裝一 ~~$ npm install body-parser --save~~ 新版已經不需要裝了, 包含在 express 裏面
 - index.js 裏面加入
 ```
 app.use(express.urlencoded({ extended: true }));
