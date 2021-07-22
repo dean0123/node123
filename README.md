@@ -25,7 +25,7 @@ http.createServer(function(request, response) {
   response.end();
 }).listen(8888);
 ```
-- 然後 執行
+- 然後 terminal 執行 
 ```
 $ node server.js
 ```
@@ -93,12 +93,12 @@ app.post('/login', (req, res)=>{
 })
 ```
 - 然後用 Postman 或 Chrome Postman(已經deprecated) 測試傳入跟回應
-  1. 打開 postman 選 POST  http://localhost:8888/login
+  1. 打開 postman 選 POST 網址打 http://localhost:8888/login
   2. 選 Body -> raw -> JSON
   3. 打入 Json 類似  {"user":"David"} 然後送出, 可以看到回應跟 console.log
-- 也可以用 curl 來測試, 
+- 也可以在Terminal 用 curl 指令來測試, 注意在Windows 上 JSON裏面的雙引號 \" 要 加 escape, 在 Linux/Mac 可以用 單引號包 JSON '{"user":"Amy"}'
 ```
-> curl -X POST -H "Content-Type: application/json" -d "{\"user\":\"Amy\"}" http://localhost:8888/login
+$ curl -X POST -H "Content-Type: application/json" -d "{\"user\":\"Amy\"}" http://localhost:8888/login
 ```
 
 # 8. 設定靜態的檔案  html, css, js, JPG 等
