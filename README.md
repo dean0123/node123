@@ -98,7 +98,7 @@ app.post('/login', (req, res)=>{
   3. 打入 Json 類似  {"user":"David"} 然後送出, 可以看到回應跟 console.log
 - 也可以用 curl 來測試, 
 ```
-curl -X POST -H "Content-Type: application/json" -d "{\"user\":\"Amy\"}" http://localhost:8888/login
+> curl -X POST -H "Content-Type: application/json" -d "{\"user\":\"Amy\"}" http://localhost:8888/login
 ```
 
 # 8. 設定靜態的檔案  html, css, js, JPG 等
