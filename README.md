@@ -1,5 +1,6 @@
 # 1. 開始安裝設定 node.js 寫程式的環境
 
+- 網頁在這裏 https://dean0123.github.io/node123/ 
 - `google node.js` 並下載安裝 Node.js
 - 完了 之後 測試  
 ```
