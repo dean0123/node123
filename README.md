@@ -41,6 +41,7 @@ $ npm install express --save  (多了 node_modules)
 - 加一個檔案 .gitignore 裏面放 `/node_modules/*` 這樣就不必把 這些檔案都放入 github 了, 沒必要, 因爲不會改
 
 - 寫一個 index.js  
+- 
 ```
 var express = require('express');
 var app = express();  // 產生 Express app 物件 
@@ -67,6 +68,7 @@ $ nodemon index.js
 
 
 # 6. 測試 get /json  回應 JSON 給API 呼叫
+- 可以使用 URL 傳 參數 param 如: res.param.user
 - 測 Json `index.js` 加入
 ```
 app.get('/json', function (req, res) => {
@@ -76,7 +78,8 @@ app.get('/json', function (req, res) => {
 })
 ```
 
-# 7. 測試 post  //因爲 get 只能由 URL 傳參數, Post可以由 FORM 傳 參數
+# 7. 測試 post 透過 BODY 傳 JSON
+- 因爲 GET 只能由 URL 傳參數, POST 可以由 FORM BODY 傳 參數. 如 res.body.user
 - Post 要裝一 ~~`$ npm install body-parser --save` ~~ 新版已經不需要裝了, 包含在 express 裏面
 - index.js 裏面加入
 ```
