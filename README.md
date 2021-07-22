@@ -57,6 +57,17 @@ app.listen(8888, function () {
 $ node index.js
 ``` 
 
+# npm install -g nodemon
+- 因爲常常要 control - C 重啓 node index.js , 安裝使用 nodemon 可以自動偵測檔案變化, 重load, 開發上比較方便
+```
+$ npm install -g nodemon
+$ nodemon index.js
+```
+# 設定靜態的檔案  html, css, js, JPG 等
+```
+app.use(express.static('public'))
+```
+
 # 6. 測試 get /json  回應 JSON 給API 呼叫
 - 測 Json `index.js` 加入
 ```
@@ -68,16 +79,24 @@ app.get('/json', function (req, res) => {
 ```
 
 # 7. 測試 post  //因爲 get 只能由 URL 傳參數, Post可以由 FORM 傳 參數
-- Post 要裝一 `$ npm install body-parser --save` 
+- Post 要裝一 ~~`$ npm install body-parser --save` ~~ 新版已經不需要裝了, 包含在 express 裏面
 - index.js 裏面加入
 ```
-app.post('/login', function (req, res) => {   
-   res.json({
-       Post_result: 'ok',
-       body: req.body
-   });
-   console.log(req.body)
+app.use(express.urlencoded({ extended: true }));
+app.use(express.json());
+app.post('/login', (req, res)=>{   
+    res.json({
+        Post_result: "OK4",
+        req_body: req.body
+    });
+   console.log("Got POST request and response --->",req.body);   
 })
 ```
-- 然後用 Postman 測試傳入跟回應 
-- 也可以用 curl -X POST -H "Content-Type: application/json" -d '{"uid":"david", "password":"12345678"}' http://localhost:8888/login 
+- 然後用 Postman 或 Chrome Postman(已經deprecated) 測試傳入跟回應
+  1. 打開 postman 選 POST  http://localhost:8888/login
+  2. 選 Body -> raw -> JSON
+  3. 打入 Json 類似  {"user":"David"} 然後送出, 可以看到回應跟 console.log
+- 也可以用 curl 來測試, 
+```
+curl -X POST -H "Content-Type: application/json" -d "{\"user\":\"Amy\"}" http://localhost:8888/login
+```
