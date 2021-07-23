@@ -1,0 +1,86 @@
+<html>
+    <head>
+        <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/echarts@5.1.2/dist/echarts.min.js"></script>
+
+    </head>
+    <body>
+
+        EChart Example
+        <div id="chartmain" style="width:600px; height: 250px;"></div>
+        EChart Example 2
+        <div id="chart2" style="width:600px; height: 250px;"></div>
+
+
+        <script type="text/javascript">
+            //指定圖示的配置和資料
+            var option = {
+                title:{
+                    text:'ECharts Test'
+                },
+                tooltip:{},
+                legend:{
+                    data:['使用者來源']
+                },
+                xAxis:{
+                    data:["Android","IOS","PC","Ohter"]
+                },
+                yAxis:{
+    
+                },
+                series:[{
+                    name:'訪問量',
+                    type:'bar',
+                    data:[500,200,360,100]
+                }]
+            };
+            //初始化echarts例項
+            var myChart = echarts.init(document.getElementById('chartmain'));
+    
+            //使用制定的配置項和資料顯示圖表
+            myChart.setOption(option);
+
+
+
+
+
+
+
+// var app = {};
+var chartDom = document.getElementById('chart2');
+var myChart = echarts.init(chartDom);
+var option;
+
+option = {
+    legend: {},
+    tooltip: {},
+    dataset: {
+        source: [
+            ['product', '2015', '2016', '2017'],
+            ['Matcha Latte', 43.3, 85.8, 93.7],
+            ['Milk Tea', 83.1, 73.4, 55.1],
+            ['Cheese Cocoa', 86.4, 65.2, 82.5],
+            ['Walnut Brownie', 72.4, 53.9, 39.1],
+            ['手搖飲', 99.4, 83.9, 79.1]
+        ]
+    },
+    xAxis: {type: 'category'},
+    yAxis: {},
+    // Declare several bar series, each will be mapped
+    // to a column of dataset.source by default.
+    series: [
+        {type: 'bar'},
+        {type: 'bar'},
+        {type: 'bar'},
+        {type: 'line'}
+    ]
+};
+
+option && myChart.setOption(option);
+
+
+        </script>
+
+
+
+    </body>
+</html>
