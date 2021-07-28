@@ -5,13 +5,15 @@
     </head>
     <body>
 
-        EChart Example
+        --- EChart Example ---
         <div id="chartmain" style="width:600px; height: 250px;"></div>
         EChart Example 2
         <div id="chart2" style="width:600px; height: 250px;"></div>
+        <div id="data1" >TEST...</div>
 
 
         <script type="text/javascript">
+
             //指定圖示的配置和資料
             var option = {
                 title:{
@@ -77,6 +79,12 @@ option = {
 
 option && myChart.setOption(option);
 
+
+// ======= SQL DATA Query ======
+console.log("====== Check SQL Query Result ======")
+
+var data1=document.getElementById('data1');
+data1.innerText='Data Table .....'
 
         </script>
 
