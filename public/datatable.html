@@ -1,0 +1,47 @@
+<html>
+    <head>
+        <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.25/css/jquery.dataTables.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.10.25/js/jquery.dataTables.js"></script>
+        
+    </head>
+    <body>
+        Test SQL Query to Data Table  (Datatables.net) <br>
+        
+
+        <table id="table_id" class="display" style="width:80%">
+            <thead>
+                <tr>
+                    <th>Week</th><th>Tool1</th><th>Tool2</th><th>Tool3</th><th>Tool4</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>10</td><td>33</td><td>21</td><td>43</td><td>53</td>
+                </tr>
+                <tr>
+                    <td>11</td><td>19</td><td>43</td><td>31</td><td>26</td>
+                </tr>
+                <tr>
+                    <td>12</td><td>22</td><td>42</td><td>24</td><td>23</td>
+                </tr>
+                <tr>
+                    <td>13</td><td>53</td><td>23</td><td>52</td><td>35</td>
+                </tr>
+                <tr>
+                    <td>14</td><td>23</td><td>43</td><td>23</td><td>37</td>
+                </tr>
+                <tr>
+                    <td>15</td><td>33</td><td>33</td><td>33</td><td>33</td>
+                </tr>
+            </tbody>
+        </table>
+
+
+        <script type="text/javascript">
+            $(document).ready( function () {
+                $('#table_id').DataTable();
+            } );
+        </script>
+    </body>
+</html>
