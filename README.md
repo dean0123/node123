@@ -111,9 +111,12 @@ $ curl -X POST -H "Content-Type: application/json" -d "{\"user\":\"Amy\"}" http:
 ```
 app.use(express.static('public'))
 ```
-- datatable 測試在這 https://dean0123.github.io/node123/public/datatable.html
-程式碼如下 https://github.com/dean0123/node123/blob/main/public/chart.html
+- datatable 測試在這 https://dean0123.github.io/node123/public/datatable.html 
+程式碼如下 https://github.com/dean0123/node123/blob/main/public/datatable.html
 
-- echart 測試在這 https://dean0123.github.io/node123/public/echart.html
-- chart 測試在這 https://dean0123.github.io/node123/public/chart.html
+- echart 測試在這 https://dean0123.github.io/node123/public/echart.html 
+程式碼如下 https://github.com/dean0123/node123/blob/main/public/echart.html
+
+- chart 測試在這 https://dean0123.github.io/node123/public/chart.html 
+程式碼如下 https://github.com/dean0123/node123/blob/main/public/chart.html
 
