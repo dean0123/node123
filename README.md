@@ -115,11 +115,10 @@ app.use(express.static('public'))
  
 程式碼如下 https://github.com/dean0123/node123/blob/main/public/datatable.html
 
-- echart 測試在這 https://dean0123.github.io/node123/public/echart.html .
+- echart 測試在這 https://dean0123.github.io/node123/public/echart.html .  
 
 程式碼如下 https://github.com/dean0123/node123/blob/main/public/echart.html
 
 - chart 測試在這 https://dean0123.github.io/node123/public/chart.html .  
-
 程式碼如下 https://github.com/dean0123/node123/blob/main/public/chart.html
 
