@@ -111,3 +111,7 @@ $ curl -X POST -H "Content-Type: application/json" -d "{\"user\":\"Amy\"}" http:
 ```
 app.use(express.static('public'))
 ```
+- datatable 測試在這 https://dean0123.github.io/node123/public/datatable.html
+- echart 測試在這 https://dean0123.github.io/node123/public/echart.html
+- chart 測試在這 https://dean0123.github.io/node123/public/chart.html
+
